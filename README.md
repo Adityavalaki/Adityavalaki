@@ -58,7 +58,12 @@ A free Windows app that replays every F1 session since 2023 on a live track map 
 ## Currently building
 
 <!-- RECENT:START -->
-_Filled in by the hourly profile workflow._
+| Repository | Latest commit | Language | Date |
+|:--|:--|:--|:--|
+| [**portfolio**](https://github.com/Adityavalaki/portfolio) | Replace CV with updated version reflecting new skills and projects, i… | HTML | 2026-11-18 |
+| [**racecraft**](https://github.com/Adityavalaki/racecraft) | Licence for the public release: free personal use; third-party notice… | Python | 2026-11-14 |
+| [**visual-malware-v3**](https://github.com/Adityavalaki/visual-malware-v3) | add sample grayscale malware image | Python | 2026-09-18 |
+| [**VALAKIEXPORTS**](https://github.com/Adityavalaki/VALAKIEXPORTS) | new | JavaScript | 2026-06-26 |
 <!-- RECENT:END -->
 
 ## GitHub activity
