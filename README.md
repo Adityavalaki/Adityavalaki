@@ -28,14 +28,19 @@ Jun 2023 – Jun 2027 (expected)
 
 ## Projects
 
-**[Racecraft](https://github.com/Adityavalaki/racecraft)**<br>
-F1 race replay and strategy workbench on FastF1 timing data: per-compound tyre-degradation curves, undercut success rates by circuit and a regression model that predicts laps to the next pit stop, served by FastAPI to a React front end.
-<br><sub>Python · FastF1 · Pandas · scikit-learn · FastAPI · React</sub>
+**[Racecraft](https://github.com/Adityavalaki/racecraft)** &nbsp;·&nbsp; [Download for Windows](https://github.com/Adityavalaki/racecraft/releases/latest)<br>
+A free Windows app that replays every F1 session since 2023 on a live track map and works out what the timing screens don't show: what each pit stop really cost, how fast each tyre wears, where one driver is quicker than another, and who is likely to win. Race and title odds come from simulating each race thousands of times, and every prediction is scored against what then happened. The 2026 season was never used for tuning, so it is the honest test, and the card below re-reads those scores from the Racecraft repo automatically.
+<br><sub>Python · FastF1 · OpenF1 · DuckDB · Pandas · SciPy · FastAPI · React · TypeScript</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/racecraft-dark.svg">
+  <img src="assets/racecraft-light.svg" alt="Racecraft race predictions on the held-out 2026 season against the grid baseline: finishing order, winner, podium places and win-chance error. Read from the Racecraft README and updated automatically." width="100%">
+</picture>
 
 | Project | Description | Stack | Code |
 |:--|:--|:--|:--|
-| **Medication AI App** | Reads handwritten prescriptions with a benchmarked multimodal LLM behind a FastAPI back end, snaps medicine names to a known list with RapidFuzz and routes low-confidence items to a verification step, with dose reminders and one-tap SOS in React Native. | Python, FastAPI, React Native (Expo), RapidFuzz, LLM APIs | Private |
-| **Visual Malware v3** | Three-layer detector: an entropy pre-filter, an EfficientNetB0 CNN on grayscale byte-plot images (Malimg, 25 families) and a Random Forest on 69 PE-header features, fused by weighted scoring and served as a Streamlit app. | Python, TensorFlow / Keras, EfficientNetB0, scikit-learn, Streamlit | Private |
+| **Medication AI App** | Reads handwritten prescriptions with a benchmarked multimodal LLM behind a FastAPI back end, snaps medicine names to a known list with RapidFuzz and routes low-confidence items to a verification step, with dose reminders and one-tap SOS in React Native. | Python, FastAPI, React Native (Expo), RapidFuzz, LLM APIs | Private · [walkthrough on request](mailto:adityavalaki11@gmail.com?subject=Medication%20AI%20walkthrough) |
+| **Visual Malware v3** | Three-layer detector: an entropy pre-filter, an EfficientNetB0 CNN on grayscale byte-plot images (Malimg, 25 families) and a Random Forest on 69 PE-header features, fused by weighted scoring and served as a Streamlit app. | Python, TensorFlow / Keras, EfficientNetB0, scikit-learn, Streamlit | [Code](https://github.com/Adityavalaki/visual-malware-v3) |
 | **SmartSpend** | Personal finance tracker with income and expense recording, category-wise aggregation and budget-limit checks, with a data model ready for predictive expense analytics. | JavaScript, Python, HTML / CSS | [Live app](https://smartspend.dev) · [Code](https://github.com/Adityavalaki/smartspend) |
 | **FakeShield** | NLP misinformation detector: text cleaning, tokenisation and TF-IDF features feed supervised classifiers, and the output is a credibility score so borderline content goes to human review. | Python, NLP, TF-IDF, scikit-learn | [Code](https://github.com/Adityavalaki/fakeshield) |
 
@@ -50,11 +55,17 @@ F1 race replay and strategy workbench on FastF1 timing data: per-compound tyre-d
 | **Tools & Platforms** | Git · GitHub · VS Code · Jupyter · Google Colab · Linux · Docker · Postman · Figma |
 | **Professional** | Prompt Engineering · Problem Solving · Public Speaking · Leadership · Marketing · Sales · Agile · Research |
 
+## Currently building
+
+<!-- RECENT:START -->
+_Filled in by the hourly profile workflow._
+<!-- RECENT:END -->
+
 ## GitHub activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
-  <img src="assets/stats-light.svg" alt="GitHub activity: contributions in the last 12 months, public repositories, contribution streaks, stars and languages by code volume. Updated daily from public GitHub data." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+  <img src="assets/activity-light.svg" alt="GitHub activity: a contribution heatmap for the last 12 months, total contributions, days with commits, public repositories and languages by code volume. Updated hourly from public GitHub data." width="100%">
 </picture>
 
 ## Contact
