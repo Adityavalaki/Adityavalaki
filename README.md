@@ -98,7 +98,7 @@ A free Windows app that replays every Formula 1 session since 2023 and works out
 <!-- RECENT:START -->
 | Repository | Latest commit | Language | Date |
 |:--|:--|:--|:--|
-| [**portfolio**](https://github.com/Adityavalaki/portfolio) | Replace CV with updated version reflecting new skills and projects, i… | HTML | 18&nbsp;Nov&nbsp;2026 |
+| [**portfolio**](https://github.com/Adityavalaki/portfolio) | Update CV links in index.html to reflect new file naming convention | HTML | 18&nbsp;Nov&nbsp;2026 |
 | [**racecraft**](https://github.com/Adityavalaki/racecraft) | Licence for the public release: free personal use; third-party notice… | Python | 14&nbsp;Nov&nbsp;2026 |
 | [**visual-malware-v3**](https://github.com/Adityavalaki/visual-malware-v3) | add sample grayscale malware image | Python | 18&nbsp;Sep&nbsp;2026 |
 | [**VALAKIEXPORTS**](https://github.com/Adityavalaki/VALAKIEXPORTS) | new | JavaScript | 26&nbsp;Jun&nbsp;2026 |
