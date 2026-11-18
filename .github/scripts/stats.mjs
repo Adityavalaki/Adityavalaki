@@ -1,8 +1,10 @@
 // Keeps the profile live from public data. Runs in GitHub Actions with the built-in GITHUB_TOKEN; no third-party services.
 //   assets/activity-{light,dark}.svg   12-month contribution heatmap, totals and languages
 //   assets/racecraft-{light,dark}.svg  Racecraft's held-out 2026 accuracy, read from that repo's README, plus its latest release
+//   assets/hero-{light,dark}.svg       name, portrait and a weekly-contribution trace (drawn in cards.mjs)
 //   README.md, between the RECENT markers: the most recently pushed public repos with their latest commit
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { heroSvg, portraitB64 } from './cards.mjs';
 
 const LOGIN = process.env.GH_LOGIN || 'Adityavalaki';
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -77,9 +79,9 @@ export function parseRacecraft(md) {
 
 // ---------- drawing ----------
 
-const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const F = "font-family=\"-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif\"";
-const theme = (dark) => dark
+export const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+export const F = "font-family=\"-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif\"";
+export const theme = (dark) => dark
   ? { bg: '#0d1117', ink: '#e6edf3', mute: '#8b949e', rule: '#30363d', red: '#e5533d', base: '#6e7681',
       heat: ['#161b22', '#4a1d17', '#7a2a1f', '#b03b28', '#e5533d'],
       shades: ['#e5533d', '#e6edf3', '#a4abb3', '#6e7681', '#484f58', '#30363d'] }
@@ -175,7 +177,9 @@ ${rows}
 }
 
 export function recentMd(items) {
-  const rows = items.map((r) => `| [**${esc(r.name)}**](${r.url}) | ${esc(r.commit).replace(/\|/g, '\\|')} | ${r.lang} | ${r.date} |`);
+  const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const when = (d) => `${Number(d.slice(8))} ${MON[Number(d.slice(5, 7)) - 1]} ${d.slice(0, 4)}`;
+  const rows = items.map((r) => `| [**${esc(r.name)}**](${r.url}) | ${esc(r.commit).replace(/\|/g, '\\|')} | ${r.lang} | ${when(r.date).replace(/ /g, '&nbsp;')} |`);
   return ['| Repository | Latest commit | Language | Date |', '|:--|:--|:--|:--|', ...rows].join('\n');
 }
 
@@ -203,6 +207,9 @@ async function main() {
   const s = summarise(user, today);
   writeFileSync('assets/activity-light.svg', activitySvg(s, false));
   writeFileSync('assets/activity-dark.svg', activitySvg(s, true));
+  const hero = { weeks: s.weeks, contributions: s.contributions, portrait: portraitB64() };
+  writeFileSync('assets/hero-light.svg', heroSvg(hero, false));
+  writeFileSync('assets/hero-dark.svg', heroSvg(hero, true));
 
   // Racecraft: a failure here keeps the last good card instead of failing the run.
   try {
