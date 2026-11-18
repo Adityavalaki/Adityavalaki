@@ -24,7 +24,9 @@ jobs:
         with:
           node-version: 20
       - name: Draw cards and update README
-        run: node .github/scripts/stats.mjs
+        run: |
+          node .github/scripts/cards.mjs
+          node .github/scripts/stats.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit if changed
