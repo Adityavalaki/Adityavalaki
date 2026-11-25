@@ -98,7 +98,7 @@ A free Windows app that replays every Formula 1 session since 2023 and works out
 <!-- RECENT:START -->
 | Repository | Latest commit | Language | Date |
 |:--|:--|:--|:--|
-| [**puppy-website-clone**](https://github.com/Adityavalaki/puppy-website-clone) | Use the TeddyPups logo as the browser tab icon; delete unused SVGs | JavaScript | 24&nbsp;Nov&nbsp;2026 |
+| [**puppy-website-clone**](https://github.com/Adityavalaki/puppy-website-clone) | Lighthouse fixes: robots.txt and llms.txt, ticket arrow contrast, sel… | JavaScript | 25&nbsp;Nov&nbsp;2026 |
 | [**portfolio**](https://github.com/Adityavalaki/portfolio) | Update CV links in index.html to reflect new file naming convention | HTML | 18&nbsp;Nov&nbsp;2026 |
 | [**racecraft**](https://github.com/Adityavalaki/racecraft) | Licence for the public release: free personal use; third-party notice… | Python | 14&nbsp;Nov&nbsp;2026 |
 | [**visual-malware-v3**](https://github.com/Adityavalaki/visual-malware-v3) | add sample grayscale malware image | Python | 18&nbsp;Sep&nbsp;2026 |
